@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "lastname": "Doe",
+        "firstname": "John",
+        "email": "john.doe@example.com",
+        "phone_fixed": "01.23.45.67.89",
+        "phone_mobile": "06.78.90.12.34",
+        "address": "1, Rue de la paix",
+        "city": "Paris",
+        "zipcode": "75001",
+        "country": "France",
+        "birthdate": "1990-01-01",
+        "tags": ["Friend", "online"]
+    },
+    {
+        "id": 2,
+        "lastname": "Smith",
+        "firstname": "Jane",
+        "email": "jane.smith@example.com",
+        "phone_fixed": "01.23.45.67.89",
+        "phone_mobile": "06.78.90.12.34",
+        "address": "1, Rue de Paris",
+        "city": "Compiègne",
+        "zipcode": "60200",
+        "country": "France",
+        "birthdate": "1990-01-01",
+        "tags": ["Family", "sister"]
+    },
+    {
+        "id": 3,
+        "lastname": "Brown",
+        "firstname": "Charlie",
+        "email": "charlie.brown@example.com",
+        "phone_fixed": "01.23.45.67.89",
+        "phone_mobile": "06.78.90.12.34",
+        "address": "1, Rue Verlaine",
+        "city": "Saint-Barnabé",
+        "zipcode": "22600",
+        "country": "France",
+        "birthdate": "1990-01-01",
+        "tags": ["Family", "father"]
+    },
+    {
+        "id": 4,
+        "lastname": "Johnson",
+        "firstname": "Emily",
+        "email": "emily.johnson@example.com",
+        "phone_fixed": "01.23.45.67.89",
+        "phone_mobile": "06.78.90.12.34",
+        "address": "1, Rue des Allemands",
+        "city": "Douai",
+        "zipcode": "59500",
+        "country": "France",
+        "birthdate": "1990-01-01",
+        "tags": ["Friend", "school"]
+    },
+    {
+        "id": 5,
+        "lastname": "Magico",
+        "firstname": "William",
+        "email": "william.magico@example.com",
+        "phone_fixed": "01.23.45.67.89",
+        "phone_mobile": "06.78.90.12.34",
+        "address": "1, Rue de Genève",
+        "city": "Lausanne",
+        "zipcode": "1010",
+        "country": "Switzerland",
+        "birthdate": "1990-01-01",
+        "tags": ["Friend", "boardgame"]
+    }
+]
