@@ -1,0 +1,39 @@
+.display-contacts {
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+.contact-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.contact-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+/* .contact-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+} */
+.contact-item p {
+    margin: 5px 0;
+}
+.contact-item button {
+    margin-right: 5px;
+}
+.delete-contact {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    /* padding: 5px 10px; */
+    cursor: pointer;
+    &:hover {
+        background-color: #ff1a1a;
+    }
+}
