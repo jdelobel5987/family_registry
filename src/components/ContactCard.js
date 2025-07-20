@@ -10,16 +10,16 @@ function ContactCard({ contact }) {
                     <h3>{contact.lastname} {contact.firstname}</h3>
                 </div>
                 <div className="back">
-                    <h4>Address</h4>
+                    <h4>~ Address ~</h4>
                     <p>{contact.address}</p>
                     <p>{contact.zipcode}, {contact.city}</p>
                     <p>{contact.country}</p>
-                    <h4>Contact</h4>
-                    <p>Email: <a href={`mailto:${contact.email}`}>{contact.email}</a></p>
-                    <p>Phone: <a href={`tel:${contact.phone_fixed}`}>{contact.phone_fixed}</a> - <a href={`SMS:${contact.phone_mobile}`}>{contact.phone_mobile}</a></p>
-                    <h4>Birthdate</h4>
+                    <h4>~ Contact ~</h4>
+                    <p>📧<a href={`mailto:${contact.email}`}>{contact.email}</a></p>
+                    <p>📞<a href={`tel:${contact.phone_fixed}`}>{contact.phone_fixed}</a></p>
+                    <p>📱<a href={`SMS:${contact.phone_mobile}`}>{contact.phone_mobile}</a></p>
+                    <h4>~ Birthdate ~</h4>
                     <p>{contact.birthdate}</p>
-                    <h4> </h4>
                     <div className="CTA">
                         <button className="edit-contact">Edit</button>
                         <button className="delete-contact">Delete</button>

@@ -10,7 +10,7 @@
         "city": "Paris",
         "zipcode": "75001",
         "country": "France",
-        "birthdate": "1990-01-01",
+        "birthdate": "01/01/1990",
         "tags": ["Friend", "online"]
     },
     {
@@ -24,7 +24,7 @@
         "city": "Compiègne",
         "zipcode": "60200",
         "country": "France",
-        "birthdate": "1990-01-01",
+        "birthdate": "01/01/1990",
         "tags": ["Family", "sister"]
     },
     {
@@ -38,7 +38,7 @@
         "city": "Saint-Barnabé",
         "zipcode": "22600",
         "country": "France",
-        "birthdate": "1990-01-01",
+        "birthdate": "01/01/1990",
         "tags": ["Family", "father"]
     },
     {
@@ -52,12 +52,12 @@
         "city": "Douai",
         "zipcode": "59500",
         "country": "France",
-        "birthdate": "1990-01-01",
+        "birthdate": "01/01/1990",
         "tags": ["Friend", "school"]
     },
     {
         "id": 5,
-        "lastname": "Magico",
+        "lastname": "Helvete",
         "firstname": "William",
         "email": "william.magico@example.com",
         "phone_fixed": "01.23.45.67.89",
@@ -66,7 +66,7 @@
         "city": "Lausanne",
         "zipcode": "1010",
         "country": "Switzerland",
-        "birthdate": "1990-01-01",
+        "birthdate": "01/01/1990",
         "tags": ["Friend", "boardgame"]
     }
 ]

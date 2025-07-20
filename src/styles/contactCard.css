@@ -13,22 +13,6 @@
 .contact-card:hover .card-inner {
     transform: rotateY(180deg);
 }
-.contact-card p {
-    margin: 5px 0;
-}
-.contact-card button {
-    margin-right: 5px;
-}
-.delete-contact {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    /* padding: 5px 10px; */
-    cursor: pointer;
-    &:hover {
-        background-color: #ff1a1a;
-    }
-}
 .front, .back {
     position: absolute;
     width: 100%;
@@ -45,4 +29,26 @@
 .back {
     background: #f9f9f9;
     transform: rotateY(180deg);
+}
+.contact-card p {
+    margin: 5px 0;
+}
+.contact-card button {
+    margin-right: 5px;
+}
+.CTA {
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:flex-end;
+}
+.delete-contact {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    /* padding: 5px 10px; */
+    cursor: pointer;
+    &:hover {
+        background-color: #ff1a1a;
+    }
 }
