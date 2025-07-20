@@ -1,0 +1,16 @@
+.contact-card p {
+    margin: 5px 0;
+}
+.contact-card button {
+    margin-right: 5px;
+}
+.delete-contact {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    /* padding: 5px 10px; */
+    cursor: pointer;
+    &:hover {
+        background-color: #ff1a1a;
+    }
+}
