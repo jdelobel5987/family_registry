@@ -1,80 +1,133 @@
-# Family_registry
+# 📘 Family Registry - Application de registre familial
 
-An app for keeping track of relatives addresses, phone numbers, email-addresses, birthdates...
+![React](https://img.shields.io/badge/frontend-React-blue) ![PHP](https://img.shields.io/badge/backend-PHP-green) ![MySQL](https://img.shields.io/badge/database-MySQL-orange) ![Docker](https://img.shields.io/badge/container-Docker-purple)
 
-I'm using React as I am currently learning this techno. I launched the project with create-react-app, though I am aware it is being depreciated.
+Projet fullstack pour gérer un répertoire familial, avec interface React, backend PHP et base MySQL, le tout orchestré via Docker.
 
-I am using a JSON file as example data source while developing the app, but intend to implement a database for persistent modifications.
+---
 
-More details to come ;-)
+## 🧱 Architecture
 
-# Getting Started with Create React App
+FAMILY_REGISTRY/
+├── frontend/				→ Application React (UI)
+├── backend/				→ API PHP (CRUD + authentification)
+├── db/					→ Volume de données MySQL
+├── docker-compose.yml
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Services Docker:
 
-## Available Scripts
+✅ **React** : interface utilisateur avec gestion des membres
 
-In the project directory, you can run:
+✅ **PHP** : backend RESTful sécurisé via PDO
 
-### `npm start`
+✅ **MySQL** : base relationnelle (conception Merise: MCD/MLD/MPD)
 
-Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+✅ **phpMyAdmin** : visualisation de la base
 
-The page will reload when you make changes.
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 Lancer le projet (pas encore possible à ce stade)
 
-Launches the test runner in the interactive watch mode.
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Cloner le repo
 
-### `npm run build`
+2. Construire et lancer les services Docker
 
-Builds the app for production to the `build` folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+docker-compose up --build
+```
 
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
+3. Accéder aux interfaces
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* [http://localhost:3000](http://localhost:3000) ➡ Frontend React
+* [http://localhost:8000](http://localhost:8000) ➡ Backend PHP
 
-### `npm run eject`
+* [http://localhost:8080](http://localhost:8080) ➡ phpMyAdmin (MySQL)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔐 Fonctionnalités prévues
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🔸 CRUD complet sur les membres du registre
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🔸 Création de compte utilisateur + login sécurisé
 
-## Learn More
+🔸 API REST entre React et PHP (JSON)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🔸 Persistance des données en BDD MySQL
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🔸 Export dynamique du registre en .json
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🧠 Technologies utilisées
 
-### Analyzing the Bundle Size
+| Coté            | Outils principaux                       |
+| ---------------- | --------------------------------------- |
+| Frontend         | React, CSS Modules, Hooks, fetch        |
+| Backend          | PHP, PDO, JSON, sessions/JWT            |
+| Base de données | MySQL (via Docker)                      |
+| DevOps & Docker  | Docker Compose, volumes, multi-services |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## ✍ Auteur
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Conceptualisé et développé par **Julien Delobel**. Projet personnel visant à mettre en place un frontend React. L'utilisation potentielle élargie au cercle familial m'a décidé à mettre en place et permi d'expérimenter un environnement fullstack complet, avec gestion de données relationnelles, sécurisation des API et interface réactive.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## 📌 À faire
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* [ ] Rendre fonctionnelle la barre de recherche
+* filtrage des membres par nom, prénom ou relation
 
-### `npm run build` fails to minify
+* gestion du champ vide et de la casse
+* [ ] Connexion au backend PHP
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* remplacer le `fetch()` du fichier json d'exemple par des appels à l'API PHP
+* centraliser la logique de lecture dans des services (ex: `useMembers()`)
+
+* [ ] Implémentation complète du CRUD
+* ajout d'un formulaire contrôlé pour créer un membre
+
+* mise à jour d'un membre via formulaire pré-rempli
+* suppression confirmée via boite de dialogue
+
+* [ ] Structure backend en PHP
+* routes REST (GET, POST, PUT, DELETE)
+
+* connexion sécurisée à MySQL avec PDO
+* gestion des erreurs API et validation
+
+* [ ] Création de comptes utilisateurs
+
+*  formulaire d'inscription/login
+* hashage des mots de passe (`password_hash()`)
+
+* sessions ou JWT pour l'authentification
+* routes protégées côté backend
+
+* [ ] Persistance de session côté frontend
+* stockage des tokens/sessions
+
+* affichage conditionnel selon connexion
+* [ ] Environnement Docker fonctionnel
+
+* services PHP, React, MySQL, phpMyAdmin
+* volumes pour persistance
+
+* mise en place de scripts de démarrage initiaux
+* [ ] Export dynamique du registre
+
+* génération d'un fichier `.json` à partir du `useState`
+* téléchargement ou envoi à l'API
+
+* [ ] Améliorations UX/UI
+* affichage responsive
+
+* thème sombre et clair
+* [ ] Tests
+
+* tests unitaires (Jest, React testing library)
+* tests d'intégration backend (PHPUnit)
