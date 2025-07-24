@@ -29,7 +29,6 @@ FAMILY_REGISTRY/
 ## 🚀 Lancer le projet (pas encore possible à ce stade)
 
 1. Cloner le repo
-
 2. Construire et lancer les services Docker
 
 ```
@@ -40,7 +39,6 @@ docker-compose up --build
 
 * [http://localhost:3000](http://localhost:3000) ➡ Frontend React
 * [http://localhost:8000](http://localhost:8000) ➡ Backend PHP
-
 * [http://localhost:8080](http://localhost:8080) ➡ phpMyAdmin (MySQL)
 
 ---
@@ -76,57 +74,58 @@ Conceptualisé et développé par **Julien Delobel**. Projet personnel visant à
 
 ---
 
-
 ## 📌 À faire
 
 * [ ] Rendre fonctionnelle la barre de recherche
-* filtrage des membres par nom, prénom ou relation
 
+* filtrage des membres par nom, prénom ou relation
 * gestion du champ vide et de la casse
+
 * [ ] Connexion au backend PHP
 
 * remplacer le `fetch()` du fichier json d'exemple par des appels à l'API PHP
 * centraliser la logique de lecture dans des services (ex: `useMembers()`)
 
 * [ ] Implémentation complète du CRUD
-* ajout d'un formulaire contrôlé pour créer un membre
 
+* ajout d'un formulaire contrôlé pour créer un membre
 * mise à jour d'un membre via formulaire pré-rempli
 * suppression confirmée via boite de dialogue
 
 * [ ] Structure backend en PHP
-* routes REST (GET, POST, PUT, DELETE)
 
+* routes REST (GET, POST, PUT, DELETE)
 * connexion sécurisée à MySQL avec PDO
 * gestion des erreurs API et validation
 
 * [ ] Création de comptes utilisateurs
 
-*  formulaire d'inscription/login
+* formulaire d'inscription/login
 * hashage des mots de passe (`password_hash()`)
-
 * sessions ou JWT pour l'authentification
 * routes protégées côté backend
 
 * [ ] Persistance de session côté frontend
-* stockage des tokens/sessions
 
+* stockage des tokens/sessions
 * affichage conditionnel selon connexion
-* [ ] Environnement Docker fonctionnel
+
+* [X] Environnement Docker fonctionnel
 
 * services PHP, React, MySQL, phpMyAdmin
 * volumes pour persistance
-
 * mise en place de scripts de démarrage initiaux
+
 * [ ] Export dynamique du registre
 
 * génération d'un fichier `.json` à partir du `useState`
 * téléchargement ou envoi à l'API
 
 * [ ] Améliorations UX/UI
-* affichage responsive
 
+* affichage responsive
 * thème sombre et clair
+
 * [ ] Tests
 
 * tests unitaires (Jest, React testing library)
