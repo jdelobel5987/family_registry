@@ -1,24 +1,24 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 import './styles/App.css';
-import SearchContacts from './components/SearchContacts';
-import DisplayContacts from './components/DisplayContacts';
+
 
 
 function App() {
   return (
-    <div className="App">
-
-      <main>
-        <h1>Welcome to the Family Registry App</h1>
-        <p>This app helps you manage your family records efficiently.</p>
-
-        <SearchContacts /> {/*TODO: Implement SearchContacts component*/}
-        {/* <FilterContacts /> */} {/*TODO: Implement FilterContacts component */}
-        {/* <SortContacts /> */} {/*TODO: Implement SortContacts component*/}
-        {/* <ExportContacts /> */} {/*TODO: Implement ExportContacts component*/}
-        {/* <AddNewContact /> */} {/*TODO: Implement AddNewContacts component*/}
-        <DisplayContacts /> {/*TODO: Implement DisplayContacts component*/}
-      </main>
-    </div>
+    <>
+      <BrowserRouter>
+      <Navbar />  {/* Navbar utilise des Link issus de react-router donc doit être enfant de BrowserRouter */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
