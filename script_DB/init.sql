@@ -44,7 +44,8 @@ CREATE TABLE sitb_users(
    id_user INT AUTO_INCREMENT,
    name VARCHAR(50) NOT NULL,
    email VARCHAR(50) NOT NULL,
-   id_role INT NOT NULL,
+   password VARCHAR(60) NOT NULL,
+   id_role INT NOT NULL DEFAULT 2,
    PRIMARY KEY(id_user),
    UNIQUE(email),
    FOREIGN KEY(id_role) REFERENCES sitb_roles(id_role)
@@ -58,11 +59,10 @@ CREATE TABLE sitb_family_members(
    phone_fixed VARCHAR(50),
    phone_mobile VARCHAR(50),
    birthdate DATE,
+   consent BOOLEAN NOT NULL,
    id_user INT NOT NULL,
    PRIMARY KEY(id_member),
    UNIQUE(id_user),
-   UNIQUE(email),
-   UNIQUE(phone_mobile),
    FOREIGN KEY(id_user) REFERENCES sitb_users(id_user)
 );
 
@@ -142,15 +142,3 @@ VALUES
   (33, "Contact événement", "contact-evenement", 3),
   (34, "Contact réseau professionnel", "contact-reseau-professionnel", 3),
   (35, "Ancien collègue", "ancien-collegue", 3);
-
-
--- create a test administrator and a test user
--- INSERT INTO `ijen_users` (`id_users`, `firstname`, `lastname`, `email`, `password`, `phone`, `communication`, `newsletter`, `id_roles`)
--- VALUES
---     (1, 'julien', 'delobel', 'delobel.julien@outlook.com', '$2y$12$5//XZlJdn4pqeEfact2RkOcaATrMqWrwdpKS7BPXRa3T1rg6VTmoW', '0786980034', 'email', 'true', 1),
---     (2, 'julien', 'delobel', 'delobel.julien@gmail.com', '$2y$12$.1saAOOMy6mNsuxW/TEhHuFayjaNE7hL/6semVP1s6a3/fO7vx9GK', '0786980034', 'both', 'true', 2);
-
--- INSERT INTO `ijen_addresses` (`id_addresses`, `address`, `complement`, `zipcode`, `city`, `id_users`)
--- VALUES
---     (1, 'Place du Général de Gaulle', 'Château de Compiègne', '60200', 'Compiègne', 1),
---     (2, 'virgile-rossel 14', NULL, '01012', 'Lausanne', 2);
