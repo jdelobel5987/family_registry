@@ -8,5 +8,9 @@ RUN npm install --audit
 
 COPY . .
 
+ENV CHOKIDAR_USEPOLLING=true 
+# for hot reloading in Docker
+
 EXPOSE 3000
+
 CMD ["npm", "start"]
