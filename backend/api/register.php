@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Check if the request body is empty
-    $data = file_get_contents('php://input');
+    $data = file_get_contents('php://input'); // maybe localhost:80 ?
     if (empty($data)) {
         http_response_code(400);
         echo json_encode(['error' => 'No data provided']);
@@ -27,23 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // Validate required fields
-    if (!isset($data['username']) || !isset($data['email']) || !isset($data['password'])) {
-        http_response_code(400);
-        echo json_encode(['error' => 'Missing required fields']);
-        exit;
-    } else {
-        // Here you would typically handle the registration logic, such as saving to a database
-        // For demonstration, we'll just return the received data
-        http_response_code(200);
-        echo json_encode(['message' => 'Registration successful', 'data' => $data]);
-        exit;
-    }
+    require_once '../config/bootstrap.php'; // Load the bootstrap file to initialize environment variables
+    require_once '../controllers/RegisterController.php';
+    $controller = new RegisterController();
+    $controller->register($data);
 }
-// Handle POST request
-// $data = json_decode(file_get_contents('php://input'), true);
-// $username = $data['username'];
-// $email = $data['email'];
-// $password = $data['password'];
-
-// echo $data;
