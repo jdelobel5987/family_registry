@@ -15,7 +15,13 @@ class Database {
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
                 ]);
             } catch (PDOException $e) {
-                die("Database connection failed: " . $e->getMessage());
+                // die("Database connection failed: " . $e->getMessage());
+                http_response_code(500); // indique une erreur serveur
+                echo json_encode([
+                    'error' => true,
+                    'message' => 'Database connection failed: ' . $e->getMessage()
+                ]);
+                exit;
             }
         }
         return self::$pdo;
