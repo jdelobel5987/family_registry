@@ -25,4 +25,23 @@ class User {
             ':password' => $this->password
         ]);
     }
+
+    // Method to handle user Login
+    public static function attemptLogin(PDO $pdo, string $username, string $password): ?array {
+        $stmt = $pdo->prepare("
+            SELECT id_user, email, password
+            FROM sitb_users
+            WHERE name = :username OR email = :username
+        ");
+
+        $stmt->execute([':username' => $username]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user && password_verify($password, $user['password'])) {
+            unset($user['password']); // Remove password from the user data
+            return $user;
+        }
+        return null;
+    }           
+        
 }
