@@ -1,0 +1,14 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.action-bar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
